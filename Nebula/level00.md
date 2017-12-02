@@ -13,3 +13,17 @@
          flag00@nebula:~$
  
   - Done
+
+
+#### Notes
+
+`find / -perm +4000 -user level00 -type f -print`
+
+ - `/` says start at the top (root) of the file system and search every directory
+ - `-perm` says look for the permissions that follow
+ - `+4000` is the numerical representation of the SUID bit permission
+ - `-user` says look for files that are owned by the following user
+ - `level00` is the user whose files we are looking for
+ - `-type` defines the type of file we are looking for
+ - `f` represents a regular file (not directories or special files)
+ - `-print` tells the command to print to standard out the path to the file
